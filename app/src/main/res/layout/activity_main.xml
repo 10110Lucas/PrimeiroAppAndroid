@@ -6,15 +6,50 @@
     android:layout_height="match_parent"
     tools:context="br.usjt.meuprimeiroapp.MainActivity">
 
-    <EditText
-        android:id="@+id/edit_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/edit_message"/>
-    <Button
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_send"
-        android:onClick="sendMessage"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="@android:dimen/notification_large_icon_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_message"
+                android:layout_width="388dp"
+                android:layout_height="67dp"
+                android:layout_weight="1"
+                android:hint="@string/edit_message" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:layout_width="426dp"
+                android:layout_height="85dp"
+                android:onClick="sendMessage"
+                android:text="@string/button_send" />
+        </TableRow>
+    </TableLayout>
+
 </LinearLayout>
